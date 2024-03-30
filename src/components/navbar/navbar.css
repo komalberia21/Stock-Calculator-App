@@ -1,0 +1,113 @@
+.navbar {
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
+  color: blueviolet
+}
+.wrapper {
+    width: 100%;
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .items {
+      display: flex;
+      align-items: center;
+    }
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+      }
+
+        .icon {
+          font-size: 20px;
+        }
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+
+       .logo{
+        color: blueviolet;
+        display: flex;
+        align-items: center;
+       }
+       .menu{
+        display: none;
+        position: relative;
+        
+       }
+       .nav-sidebar {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 250px; 
+        height: 100%; 
+        background-color: rgb(206, 165, 245);
+        margin-top:50px;
+        z-index: 100;
+        /* Increase z-index to ensure it's on top */
+      }
+      .center-nav{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        
+      }
+      .center-nav ul{
+        gap:20px;
+        display: flex;
+        flex-direction: column;
+        margin: 12px;
+        
+      }
+      .center-nav li{
+        &:hover{
+          background-color: rgb(237, 133, 237)
+        }
+      }
+      .icon-nav{
+        margin: 4px;
+        color:black
+
+      }
+      .bottom{
+        display: flex;
+        margin-left: 60px;
+      }
+      .colorOption-nav {
+        
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: 1px solid #7451f8;
+        cursor: pointer;
+        margin: 5px;
+  
+        &:nth-child(1) {
+          background-color: whitesmoke;
+        }
+  
+        &:nth-child(2) {
+          background-color: #333;
+        }
+      }
+   
+       
+       @media screen and (max-width: 768px) {
+        .menu {
+          display: flex;
+        }
+      }
+
+
+
+      

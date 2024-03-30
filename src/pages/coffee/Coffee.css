@@ -1,0 +1,48 @@
+.coffee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width:600px;
+    margin: auto;
+   animation: borderAnimation 3s infinite alternate;
+    color: grey;
+    
+  }
+  span{
+    font-weight: bold;
+  }
+  
+  @keyframes borderAnimation {
+    0% {
+      border: 2px solid #ec480c; /* Initial border color */
+    }
+    50% {
+      border: 2px solid #6495ed; /* Intermediate border color */
+    }
+    100% {
+      border: 2px solid #ff7f50; /* Final border color */
+    }
+  }
+  .text,p{
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 20px;
+    color: rgb(199, 153, 241);
+    line-height: 1.6;
+  }
+  .about{
+    font-size: small;
+    color: rgb(138, 50, 221);
+    line-height: 1.8;
+   
+  }
+  .about h2{
+    color: blueviolet;
+    font-size: larger;
+    font-weight: bold;
+  }

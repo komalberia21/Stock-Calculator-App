@@ -1,0 +1,19 @@
+.per{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: grey;
+    
+    gap:15px;
+
+}
+h1{
+    color: rgb(242, 127, 127);
+    font-weight: bolder;
+}
+.cal-per{
+    background-color: rgb(210, 170, 247);
+}

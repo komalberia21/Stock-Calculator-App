@@ -1,0 +1,45 @@
+.zip-calculator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    margin-top: 15px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+    color: grey;
+    font-weight: 300;
+    font-weight: bold;
+}
+
+.future{
+    background-color: rgb(202, 155, 247);
+    border:2px solid grey;
+    display: flex;
+    width:350px;
+    flex-direction: column;
+    gap:13px;
+}
+
+label{
+    color: rgb(226, 39, 70);
+    font-weight: bold;
+}
+   .sip-button{
+    background-color: rgb(201, 169, 231);
+    color: black;
+    border:2px solid grey;
+    height:30px;
+    width:200px;
+    border-radius:5px;
+   }
+   input{
+    height:40px;
+    width:500px;
+    border:2px solid grey;
+    
+    
+}
