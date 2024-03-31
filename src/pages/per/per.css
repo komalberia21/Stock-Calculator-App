@@ -17,3 +17,29 @@ h1{
 .cal-per{
     background-color: rgb(210, 170, 247);
 }
+.input-group {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 22px;
+    background-color: #ffffff;
+    margin: 18px;
+    
+  }
+  .input-class {
+    border: none;
+    outline: none;
+    padding-left: 22px;
+    font-family: inherit;
+    font-size: 16px;
+    align-self: stretch;
+    width: 100%;
+    font-weight: 500;
+    margin-left: 120px;
+  }
+  label{
+    margin-top: -30px;
+  }
+  

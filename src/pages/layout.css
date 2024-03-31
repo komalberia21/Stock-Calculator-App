@@ -15,6 +15,7 @@
     display: flex;
     margin: 2px;
     margin-top: 50px;
+    overflow-x: hidden;
 }
 
 .sidebar {
@@ -22,13 +23,19 @@
 }
 
 .content {
-    flex: 1;
-}
+    display: flex;
+   margin:auto;
+    overflow: hidden;
+    
+  }
 
 @media screen and (max-width: 768px) {
     /* CSS rules for screens with a maximum width of 768px */
     .sidebar{
         display:none;
     }
-
-}
+    .content{
+        background-color: whitesmoke;
+        margin: auto;
+          }
+    }

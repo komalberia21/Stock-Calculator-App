@@ -12,13 +12,13 @@ const Sip = () => {
     amountInvested: 0,
     totalGain: 0
   });
-  console.log(monthlyInvestment);
+ 
 
   const calculateZip = () => {
     // Convert investment period to months
+    if(monthlyInvestment&&investmentPeriod&&annualReturns&&stepUpIncrease){
     const totalMonths = investmentPeriod * 12;
-
-    // Initialize variables
+// Initialize variables
     let futureValue = 0;
     let monthlyContribution = monthlyInvestment;
     let totalInvested = 0;
@@ -30,16 +30,16 @@ const Sip = () => {
       monthlyContribution += stepUpIncrease;
     }
 // Calculate expected amount and total gain
-   
-    const totalGain = futureValue - totalInvested;
-
+   const totalGain = futureValue - totalInvested;
     // Update state with the results
     setZipResult({
       futureValue: futureValue.toFixed(2),
-      
       amountInvested: totalInvested.toFixed(2),
       totalGain: totalGain.toFixed(2)
     });
+  }else{
+        alert ("fileds cant be empty");
+  }
   };
 
   return (
@@ -50,6 +50,7 @@ const Sip = () => {
         <input
           id="monthly-investment"
           type="number"
+          className='input-class'
           name="monthly-investment"
           value={monthlyInvestment}
           onChange={(e) => setMonthlyInvestment(parseFloat(e.target.value))}
@@ -62,6 +63,7 @@ const Sip = () => {
         <input
           id="investment-period"
           type="number"
+          className='input-class'
           name="invest-period"
           value={investmentPeriod}
           placeholder='investment-period'
@@ -74,6 +76,7 @@ const Sip = () => {
           id="annual-returns"
           type="number"
           name='annual'
+          className='input-class'
           value={annualReturns}
           placeholder='annula-returns'
           onChange={(e) => setAnnualReturns(parseFloat(e.target.value))}
@@ -85,6 +88,7 @@ const Sip = () => {
           id="step-up-increase"
           type="number"
           name="step-up"
+          className='input-class'
           placeholder='step-up-increase'
           value={stepUpIncrease}
           onChange={(e) => setStepUpIncrease(parseFloat(e.target.value))}

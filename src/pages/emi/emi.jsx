@@ -8,15 +8,17 @@ const Emi = () => {
   const [lastEmi, setLastEmi] = useState('');
 
   const calculateEmi = () => {
+    if(loanAmount&& annualInterest&&loanTerm){
     const principal = parseFloat(loanAmount);
     const rate = parseFloat(annualInterest) / (12 * 100); // Monthly interest rate
     const term = parseFloat(loanTerm); // Loan term in months
-
-    // Calculate EMI
+// Calculate EMI
     const emi = (principal * rate * Math.pow(1 + rate, term)) / (Math.pow(1 + rate, term) - 1);
-
-    // Set the last EMI
+// Set the last EMI
     setLastEmi(emi.toFixed(2));
+    }else{
+      alert("fileds cant be empty");
+    }
 };
 
 
@@ -27,6 +29,7 @@ const Emi = () => {
     setLastEmi('');
   };
 
+
   return (
     <div className="emi-calculator">
       <div className='title'>EMI Calculator</div>
@@ -35,6 +38,7 @@ const Emi = () => {
         <input
           id="loan-amount"
           type="number"
+          className="input-class"
           value={loanAmount}
           onChange={(e) => setLoanAmount(e.target.value)}
           placeholder='Loan amount'
@@ -45,6 +49,7 @@ const Emi = () => {
         <input
           id="annual-interest"
           type="number"
+          className="input-class"
           value={annualInterest}
           onChange={(e) => setAnnualInterest(e.target.value)}
           placeholder='Annual interest rate'
@@ -54,6 +59,7 @@ const Emi = () => {
         <label htmlFor="loan-term">Loan Term (Months):</label>
         <input
           id="loan-term"
+          className="input-class"
           type="number"
           value={loanTerm}
           onChange={(e) => setLoanTerm(e.target.value)}

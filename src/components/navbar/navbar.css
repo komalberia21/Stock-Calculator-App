@@ -69,11 +69,11 @@
         margin: 12px;
         
       }
-      .center-nav li{
-        &:hover{
+      
+.center-nav li :hover{
           background-color: rgb(237, 133, 237)
         }
-      }
+      
       .icon-nav{
         margin: 4px;
         color:black
@@ -91,20 +91,24 @@
         border: 1px solid #7451f8;
         cursor: pointer;
         margin: 5px;
+      }
   
-        &:nth-child(1) {
+        .colorOption-nav :nth-child(1) {
           background-color: whitesmoke;
         }
   
-        &:nth-child(2) {
+        .colorOption-nav:nth-child(2) {
           background-color: #333;
         }
-      }
+      
    
        
        @media screen and (max-width: 768px) {
         .menu {
           display: flex;
+        }
+        .logo{
+          font-size: 16px;
         }
       }
 

@@ -2,7 +2,7 @@ import "./navbar.css";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
-import { useContext, useState } from "react";
+import { useContext, useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -17,10 +17,22 @@ const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
   const [openmenu, setOpenMenu] = useState(false);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (openmenu && !event.target.closest('.menu')) {
+        setOpenMenu(false);}
+    };
+document.addEventListener('mousedown', handleClickOutside);
+return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  },[openmenu]);
+
   const handleMenu = () => {
     console.log("menu", openmenu);
     setOpenMenu(!openmenu);
   }
+
 
   return (
     <div className="navbar">
@@ -35,79 +47,59 @@ const Navbar = () => {
           <div className="item menu">
             <ListOutlinedIcon onClick={handleMenu} className="icon-nav" />
             {openmenu && <div className="nav-sidebar">
-             <div className="center-nav">
-                  <ul>
-                    <Link to="/" style={{ textDecoration: "none" }}>
-                      <li>
-                        <DashboardIcon className="icon-nav" />
-                        <span>Stock Average Calculator</span>
-                      </li>
-                    </Link>
-                    <Link to="/sip" style={{ textDecoration: "none" }}>
-                      <li>
-                        <MoneyIcon className="icon-nav" />
-                        <span>Sip calculator</span>
-                      </li>
-                    </Link>
-                    <Link to="/percentage" style={{ textDecoration: "none" }}>
-                      <li>
-                        <CreditCardIcon className="icon-nav" />
-                        <span>Percentage Calculator</span>
-                      </li>
-                    </Link>
-                    <Link to="/emi" style={{ textDecoration: "none" }}>
-                      <li>
-                        <PaymentIcon className="icon-nav" />
-                        <span>Emi Calculator</span>
-                      </li>
-                    </Link>
+              <div className="center-nav">
+                <ul>
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                    <li>
+                      <DashboardIcon className="icon-nav" />
+                      <span>Stock Average Calculator</span>
+                    </li>
+                  </Link>
+                  <Link to="/sip" style={{ textDecoration: "none" }}>
+                    <li>
+                      <MoneyIcon className="icon-nav" />
+                      <span>Sip calculator</span>
+                    </li>
+                  </Link>
+                  <Link to="/percentage" style={{ textDecoration: "none" }}>
+                    <li>
+                      <CreditCardIcon className="icon-nav" />
+                      <span>Percentage Calculator</span>
+                    </li>
+                  </Link>
+                  <Link to="/emi" style={{ textDecoration: "none" }}>
+                    <li>
+                      <PaymentIcon className="icon-nav" />
+                      <span>Emi Calculator</span>
+                    </li>
+                  </Link>
 
-                    <Link to="/coffee" style={{ textDecoration: "none" }}>
-                      <li>
-                        < CoffeeIcon className="icon-nav" />
-                        <span>Buy me a cofeee</span>
-                      </li>
-                    </Link>
-                    <Link to="/about" style={{ textDecoration: "none" }}>
-                      <li>
-                        <AccountCircleOutlinedIcon className="icon-nav" />
-                        <span>About</span>
-                      </li>
-                    </Link>
+                  <Link to="/coffee" style={{ textDecoration: "none" }}>
+                    <li>
+                      < CoffeeIcon className="icon-nav" />
+                      <span>Buy me a cofeee</span>
+                    </li>
+                  </Link>
+                  <Link to="/about" style={{ textDecoration: "none" }}>
+                    <li>
+                      <AccountCircleOutlinedIcon className="icon-nav" />
+                      <span>About</span>
+                    </li>
+                  </Link>
 
-                  </ul>
-                </div>
-                <div className="bottom">
-                  <div
-                    className="colorOption-nav"
-                    onClick={() => dispatch({ type: "LIGHT" })}
-                  ></div>
-                  <div
-                    className="colorOption-nav"
-                    onClick={() => dispatch({ type: "DARK" })}
-                  ></div>
-                </div>
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>}
+                </ul>
+              </div>
+              <div className="bottom">
+                <div
+                  className="colorOption-nav"
+                  onClick={() => dispatch({ type: "LIGHT" })}
+                ></div>
+                <div
+                  className="colorOption-nav"
+                  onClick={() => dispatch({ type: "DARK" })}
+                ></div>
+              </div>
+               </div>}
           </div>
         </div>
         <div className="logo">
