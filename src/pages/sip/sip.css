@@ -49,10 +49,22 @@ label{
     width:200px;
     border-radius:5px;
    }
-   input{
-    height:40px;
-    width:500px;
-    border:2px solid grey;
-    
-    
+   
+@media screen and (max-width: 550px) {
+  /* CSS rules for screens with a maximum width of 768px */
+  .title{
+      font-size: 15px;
+  }
+  .input-group{
+     margin:5px;
+      width:95%;
+      font-size:15px
+   }
+  .emi-calculator{
+      width:90%;
+  }
+  .buttons{
+      width:100%
+  }
 }
+

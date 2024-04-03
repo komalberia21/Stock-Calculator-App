@@ -118,8 +118,8 @@ const Avg = () => {
         </div>
       </div>
       <div className='buttons'>
-        <button onClick={handleSubmit} className='calculate'>Calculate Avg</button>
-        <button className="clear" onClick={handleClear} >Clear fields</button>
+        <button onClick={handleSubmit} className='calculate'>Calculate</button>
+        <button className="clear" onClick={handleClear} >Clear</button>
       </div>
 
       {open && <Result firstTotal={firstTotal} secondTotal={secondTotal} TotalUnits={TotalUnits} TotalPrice={TotalPrice} avg={avg} />}

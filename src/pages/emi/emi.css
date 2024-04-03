@@ -5,6 +5,7 @@
     align-items: center;
     gap:25px;
     margin-top: 15px;
+    background-color: green;
 }
 
 .input-group {
@@ -13,20 +14,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
     padding: 0 22px;
+    width:100%;
     background-color: #ffffff;
     margin: 18px;
+    height:80px;
+    background-color: yellow;
     
   }
   .input-class {
     border: none;
     outline: none;
-    padding-left: 22px;
-    font-family: inherit;
+   font-family: inherit;
     font-size: 16px;
     align-self: stretch;
-    width: 100%;
-    font-weight: 500;
+   font-weight: 500;
+   margin-left: -10px;
+  
+   
   }
 .buttons{
     display: flex;
@@ -44,7 +50,7 @@
 label{
     color: rgb(226, 39, 70);
     font-weight: bold;
-    margin-top: -35px;
+  
 }
    .emi-button{
     background-color: rgb(201, 169, 231);
@@ -62,11 +68,24 @@ label{
     width:200px;
     border-radius:5px;
    }
-   input{
-    height:40px;
-    width:500px;
-    border:2px solid grey;
-    
-    
+   
+
+@media screen and (max-width: 550px) {
+    /* CSS rules for screens with a maximum width of 768px */
+    .title{
+        font-size: 15px;
+    }
+    .input-group{
+       margin:5px;
+        width:95%;
+        font-size:15px
+     }
+    .emi-calculator{
+        width:90%;
+    }
+    .buttons{
+        width:100%
+    }
 }
+    
 

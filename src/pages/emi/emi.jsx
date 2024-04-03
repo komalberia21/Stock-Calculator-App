@@ -21,8 +21,7 @@ const Emi = () => {
     }
 };
 
-
-  const clearFields = () => {
+const clearFields = () => {
     setLoanAmount('');
     setAnnualInterest('');
     setLoanTerm('');
@@ -67,8 +66,8 @@ const Emi = () => {
         />
       </div>
       <div className="buttons">
-      <button className="emi-button" onClick={calculateEmi}>Calculate EMI</button>
-      <button className="emi-clear" onClick={clearFields}>Clear Fields</button>
+      <button className="emi-button" onClick={calculateEmi}>Calculate</button>
+      <button className="emi-clear" onClick={clearFields}>Clear</button>
       </div>
       
       {lastEmi && (

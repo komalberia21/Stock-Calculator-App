@@ -7,6 +7,8 @@
 -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 8px 1px rgba(201, 201, 201, 0.47);
     width:800px;
+    background-color: green;
+
   
   }
 .title{
@@ -42,7 +44,7 @@
         color: rgb(226, 39, 70);
            }
        button{
-        background-color: rgb(144, 237, 144);
+       
         color: black;
         border:2px solid grey;
         height:30px;
@@ -66,6 +68,8 @@
         justify-content: center;
         padding: 0 22px;
         background-color: #ffffff;
+        background-color: yellow;
+
         
       }
       .goal-input {
@@ -84,13 +88,28 @@
         .title{
             font-size: 22px;
         }
+        
     }
 
-       @media screen and (max-width: 500px) {
+       @media screen and (max-width: 550px) {
         /* CSS rules for screens with a maximum width of 768px */
         .title{
             font-size: 15px;
         }
+        .goal-container{
+           margin:5px;
+            width:95%;
+            font-size:15px
+
+        }
+        .main{
+            width:90%;
+        }
+        button{
+            width:100%
+        }
+        
+        
         
         
     
